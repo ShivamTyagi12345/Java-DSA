@@ -16,8 +16,8 @@ public class sum {
                 if(sum == 0) {
                     result.add(Arrays.asList(nums[i], nums[j], nums[k]));
                     //below two lines are for [-2,0,0,2,2] like scenario
-                    while(nums[j] == nums[j+1]) j++; //check-j skip duplicates
-                    while( nums[k] == nums[k-1]) k--; //check-k skip duplicates
+                    while(j< k && nums[j] == nums[j+1]) j++; //check-j skip duplicates
+                    while(j<k && nums[k] == nums[k-1]) k--; //check-k skip duplicates
                     j++; k--;
                 }
                 else if(sum<0) j++;
